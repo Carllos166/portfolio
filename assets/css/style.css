@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    color: #fff;
+    box-sizing: border-box;
 }
 
 a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     transition: 0.3s;
-    padding: 15px;
+
 }
 
 a:hover {
@@ -27,12 +29,12 @@ nav {
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
-    height: 8vh;
 }
 
 main {
     height: 85vh;
     background: #fff;
+    width: 100%;
 }
 
 .nav-list {
@@ -85,6 +87,7 @@ main {
 
 .profile img {
     width: 35%;
+    padding: 15px 2px;
 }
 
 .skills {
@@ -100,13 +103,22 @@ main {
 .footer {
     background-color: #23232e;
     height: 7vh;
+    width: 100%;
     
 }
 
 
-@media (max-width: 999px) {
+@media (min-width: 320px) {
     body {
         overflow-x: hidden;
+    }
+
+    nav {
+        height: 5vh;
+    }
+
+    main {
+        height: 85vh;
     }
 
     .nav-list {
@@ -119,7 +131,7 @@ main {
         opacity: 0.8;
         flex-direction: column;
         align-items: center;
-        padding-top: 60px;
+        padding-top: 2.625rem;
         left: 0;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
@@ -163,7 +175,7 @@ main {
     .container {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -175,12 +187,22 @@ main {
     }
     
     .container .about {
-        background-color:  rgba(152, 148, 148, 0.66);
-        height: 100vh;
+        background-color: #3f4447;
+        height: 100%;
         display: flex;
+        align-content: center;
+        max-height: 100%;
         align-items: center;
-        padding: 10rem 2.5rem;
+        justify-content: center;
+        padding: 1.2rem 2.5rem;
     }
+
+    .about .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .container .title h1,span {
         font-size: 2.188rem;
     }
@@ -190,9 +212,80 @@ main {
     }
 
     .profile img {
-        width: 80%;
+        width: 70%;
+        display: block;
+        margin: auto;
+    }
+
+    .about .title p {
+        line-height: 150% !important;
+    }
+
+    .about .actions {
+        padding-top: 1rem;
+    }
+
+    .about .actions a {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #F9F9F9;
+        padding: 0.825rem 1.7rem;
+        background-image: linear-gradient(90deg, rgba(104, 103, 103, 0.8) .5%, rgba(0, 0, 0, 0.648) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        transition: .3s;
+        margin: 1rem;
+    }
+
+    .about-me {
+        padding-top: 2.2rem;
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        max-width: 100%;
+    }
+    
+    .footer a {
+        padding: 0 2.225rem;
+    }
+
+    .footer .github-img{
+        width: 2.5rem;
     }
 }
+
+@media (width: 375px) {
+    .about .profile img{
+        width: 50%;
+    }
+
+    .about-me {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:700px) {
+    .about-me {
+        font-size: 1.325rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-me {
+        font-size: 1.525rem;
+        padding-top: 1.525rem;
+        padding-bottom: 1rem;
+    }
+}
+
 
 @keyframes navLinkFade {
     from {
