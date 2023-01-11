@@ -5,7 +5,7 @@
 }
 
 a {
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     transition: 0.3s;
     padding: 15px;
@@ -58,9 +58,33 @@ main {
     transition: 0.3s;
 }
 
-.about {
-    background-color:  #fff;
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .about {
+    background-color:  rgba(152, 148, 148, 0.66);
     height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 2.5rem;
+}
+
+.container .title h1,span {
+    font-size: 4rem;
+}
+
+.container .title p {
+    font-size: 2rem;
+}
+
+.profile img {
+    width: 35%;
 }
 
 .skills {
@@ -126,8 +150,6 @@ main {
         letter-spacing: 3px;
         color: #fff;
         padding-top: 20px;
-        
-
     }
 
     .logo {
@@ -136,6 +158,39 @@ main {
 
     .nav-list.active {
         transform: translateX(0);
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+
+    }
+    
+    .container .about {
+        background-color:  rgba(152, 148, 148, 0.66);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 10rem 2.5rem;
+    }
+    .container .title h1,span {
+        font-size: 2.188rem;
+    }
+    
+    .container .title p {
+        font-size: 1rem;
+    }
+
+    .profile img {
+        width: 80%;
     }
 }
 
