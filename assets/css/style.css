@@ -36,7 +36,6 @@ nav {
 }
 
 main {
-    height: 85vh;
     background: #fff;
     width: 100%;
     min-height: 100vh !important;
@@ -122,9 +121,6 @@ main {
         height: 5vh;
     }
 
-    main {
-        height: 85vh;
-    }
 
     .nav-list {
         position: absolute;
@@ -193,7 +189,7 @@ main {
     
     .container .about {
         background-color: #3f4447;
-        height: 100%;
+        height: 100vh;
         /* display: flex; */
         align-content: center;
         max-height: 100%;
