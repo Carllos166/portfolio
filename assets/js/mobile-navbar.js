@@ -1,9 +1,10 @@
 class MobileNavbar {
-    constructor(mobileMenu, navList, navLinks) {
+    constructor(mobileMenu, navList, navLinks, overflowBody) {
         this.mobileMenu = document.querySelector(mobileMenu);
         this.navList = document.querySelector(navList);
         this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
+        this.overflowBody = "scroll"
 
         this.handleClick = this.handleClick.bind(this) // Para se referir diretamente a classe e não ao "botão" em si.
     }
@@ -19,6 +20,24 @@ class MobileNavbar {
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
         this.mobileMenu.classList.toggle(this.activeClass) // animacao no menu
+        if (this.navList.classList.contains(this.activeClass)) {
+            this.overflowBody = 'hidden'
+            document.body.style.overflow = this.overflowBody
+        } else {
+            this.overflowBody = 'scroll'
+            document.body.style.overflow = this.overflowBody
+        }
+
+
+
+
+        // if (this.navList.classList.contains(this.activeClass)) {
+        //     this.overflowBody = 'hidden'
+        //     document.body.style.overflow = this.overflowBody
+        // } else {
+        //     this.overflowBody = 'scroll'
+        //     document.body.style.overflow = this.overflowBody
+        // }
         this.animateLinks();
     }
 
