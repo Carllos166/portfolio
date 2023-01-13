@@ -72,6 +72,17 @@ main {
     justify-content: center;
 }
 
+.container-about {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+
 .container {
     background-color: var(--primary-color);
     display: flex;
@@ -275,10 +286,14 @@ main {
     .about-me {
         padding-top: 2.2rem;
         font-size: 1.2rem;
+        margin: 0 1rem;
     }
 
     .box {
         padding: 15px;
+        background-image: linear-gradient(90deg, rgba(104, 103, 103, 0.8) .5%, rgba(0, 0, 0, 0.648) 100%);
+        margin: 1rem;
+        border-radius: 0.5rem;
     }
 
     .cards-projects .box img {
