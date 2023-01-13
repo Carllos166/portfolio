@@ -23,12 +23,6 @@ a:hover {
     opacity: 0.5;
 }
 
-.logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -40,6 +34,12 @@ nav {
 main {
     background: var(--text-color);
     width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .mobile-menu {
@@ -148,7 +148,7 @@ main {
 }
 
 
-@media (min-width: 320px) {
+@media (max-width: 480px) {
     body {
         overflow-x: hidden;
     }
@@ -180,7 +180,7 @@ main {
 
 
     .nav-list li {
-        padding: 15px;
+        padding: 2rem;
         font-size: 1.7rem;
     }
 
@@ -221,7 +221,8 @@ main {
     
 
     .about {
-        flex-wrap: wrap-reverse;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
 
     }
@@ -261,7 +262,7 @@ main {
         margin: 1rem;
     }
 
-    .about-me {
+    .about-me p{
         padding-top: 2.2rem;
         font-size: 1.2rem;
         margin: 0 1rem;
@@ -308,8 +309,6 @@ main {
         flex-wrap: wrap;
         align-items: center;
         gap: 5rem;
-
-        
     }
 
     .footer {
@@ -328,32 +327,6 @@ main {
         width: 2.5rem;
     }
 }
-
-@media (width: 375px) {
-    .about .profile img{
-        width: 50%;
-    }
-
-    .about-me {
-        font-size: 1rem;
-    }
-}
-
-@media (min-width:700px) {
-    .about-me {
-        font-size: 1.325rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .about-me {
-        font-size: 1.525rem;
-        padding-top: 1.525rem;
-        padding-bottom: 1rem;
-    }
-}
-
-
 @keyframes navLinkFade {
     from {
         opacity: 0;
