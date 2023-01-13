@@ -114,7 +114,7 @@ main {
 .container-projects {
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: row;
+
     flex-wrap: wrap;
     margin-left: auto;
     justify-content: center;
@@ -125,22 +125,6 @@ main {
     display: flex;
     justify-content: center;
     margin: 3rem 0;
-}
-
-
-.container .about {
-    /* display: flex; */
-    justify-content: space-between;
-    align-items: center;
-    padding: 10rem 2.5rem;
-}
-
-.container .title-intro h1,span {
-    font-size: 4rem;
-}
-
-.container .title-intro p {
-    font-size: 2rem;
 }
 
 .profile img {
@@ -234,47 +218,18 @@ main {
         animation: fade 1s;
         
     }
-
-    .nav-list.active .container {
-        overflow: hidden;
-    }
     
-    .container {
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     .about {
         flex-wrap: wrap-reverse;
         justify-content: center;
 
     }
-    
-    .container .about {
-        background-color: var(--primary-color);
-        height: 100vh;
-        /* display: flex; */
-        align-content: center;
-        max-height: 100%;
-        align-items: center;
-        justify-content: center;
-        padding: 1.2rem 2.5rem;
-    }
 
     .about .title-intro {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .container .title-intro h1,span {
-        font-size: 2.188rem;
-    }
-    
-    .container .title-intro p {
-        font-size: 1rem;
     }
 
     .profile img {
