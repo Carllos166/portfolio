@@ -4,7 +4,7 @@ class MobileNavbar {
         this.navList = document.querySelector(navList);
         this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
-        this.overflowBody = "scroll"
+        document.body.style.overflow = this.overflowBody
 
         this.handleClick = this.handleClick.bind(this) // Para se referir diretamente a classe e não ao "botão" em si.
     }
@@ -27,23 +27,15 @@ class MobileNavbar {
             this.overflowBody = 'scroll'
             document.body.style.overflow = this.overflowBody
         }
-
-
-
-
-        // if (this.navList.classList.contains(this.activeClass)) {
-        //     this.overflowBody = 'hidden'
-        //     document.body.style.overflow = this.overflowBody
-        // } else {
-        //     this.overflowBody = 'scroll'
-        //     document.body.style.overflow = this.overflowBody
-        // }
         this.animateLinks();
     }
 
 
     addClickEvent() {
         this.mobileMenu.addEventListener("click", this.handleClick);
+        this.navLinks.forEach(link => {
+            link.addEventListener("click", this.handleClick)
+        })
     }
 
     init() {
