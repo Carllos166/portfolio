@@ -75,30 +75,58 @@ main {
 .container-about {
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
 
+.profile img {
+    width: 30% !important;
+}
 
-.container {
+
+
+.container-skills {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.container-skills h2 {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5rem;
+}
+.container-projects {
     background-color: var(--primary-color);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: auto;
+    justify-content: center;
     margin-right: auto;
-    width: 90%;
 }
 
-.container h2{
-    display: block;
-    margin: auto;
-    padding: 30px;
-    font-size: 1.7rem;
+.projects h2 {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
 }
+
 
 .container .about {
     /* display: flex; */
@@ -118,11 +146,6 @@ main {
 .profile img {
     width: 35%;
     padding: 15px 2px;
-}
-
-
-.projects {
-
 }
 
 .cards-projects p {
