@@ -3,7 +3,7 @@
     --text-color: #fff;
     --secondary-color: #23232e;
     --background-filter: rgba(0, 0, 0, 0.45)
-} 
+}
 
 * {
     margin: 0;
@@ -32,6 +32,7 @@ main {
 .nav-list {
     display: flex;
     justify-content: space-evenly;
+    background-color: var(--secondary-color);
 
 }
 
@@ -40,11 +41,11 @@ main {
 }
 
 .nav-list li {
-    font-size: 2rem;
+    font-size: 1.325rem;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    margin: 1rem;
+    margin: 1.75rem 3rem;
     list-style: none;
-    border: var(--primary-color) 5px ;
+    border: var(--primary-color) 5px;
 }
 
 .container-about {
@@ -55,6 +56,47 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+}
+
+.about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 10rem 2.5rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+}
+
+
+.profile img {
+    width: 30rem;
+    display: block;
+    margin: auto;
+}
+
+
+.skill-box {
+    width: 10rem;
+}
+
+.imgJavascript {
+    width: 10rem;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    display: flex;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    ;
 }
 
 @media (max-width: 480px) {
@@ -69,7 +111,7 @@ main {
         font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
         background: #23232e;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
@@ -77,15 +119,16 @@ main {
     .logo {
         display: none;
     }
-    
+
     .mobile-menu {
         display: block;
         cursor: pointer;
     }
-    
+
     .mobile-menu div {
         width: 32px;
-         height: 2px; /*AQUI */
+        height: 2px;
+        /*AQUI */
         background-color: var(--text-color);
         margin: 8px;
         transition: 0.3s;
@@ -147,9 +190,9 @@ main {
         padding-top: 7.5rem;
         align-items: center;
         animation: fade 1s;
-        
+
     }
-    
+
     .title {
         font-size: clamp(1.625rem, 6vw, 3rem) !important;
         letter-spacing: 1px !important;
@@ -157,7 +200,7 @@ main {
         top: 60px;
         justify-content: center;
     }
-    
+
     .container-about {
         background-color: var(--primary-color);
         display: flex;
@@ -215,13 +258,13 @@ main {
         margin: 1rem;
     }
 
-    .about-me p{
+    .about-me p {
         padding-top: 2.2rem;
         font-size: 1.2rem;
         margin: 0 1rem;
     }
 
-    
+
     .container-skills {
         background-color: var(--primary-color);
         display: flex;
@@ -232,13 +275,13 @@ main {
         margin-right: auto;
         width: 90%;
     }
-    
+
     .container-skills h2 {
         padding: 5rem 0;
         display: flex;
         justify-content: center;
     }
-    
+
     .cards {
         display: flex;
         flex-wrap: wrap;
@@ -261,7 +304,7 @@ main {
         cursor: pointer;
         transition: .2s;
         background-image: linear-gradient(90deg, rgba(104, 103, 103, 0.8) .5%, rgba(0, 0, 0, 0.648) 100%);
-        
+
     }
 
     .skill-box img {
@@ -278,20 +321,20 @@ main {
         justify-content: center;
         margin-right: auto;
     }
-    
+
     .projects h2 {
         display: flex;
         justify-content: center;
         margin: 3rem 0;
     }
-    
+
     .cards-projects p {
         display: flex;
         justify-content: center;
         font-size: 1.225rem;
         padding: 10px;
     }
-    
+
     .footer {
         background-color: var(--secondary-color);
         width: 100%;
@@ -301,7 +344,7 @@ main {
         align-items: center;
         height: 10vh;
         max-width: 100%;
-        
+
     }
 
     .box {
@@ -317,36 +360,37 @@ main {
         height: 100%;
     }
 
-    .footer {
+    .footer {}
 
-    }
-    
     .footer a {
         padding: 0 2.225rem;
     }
 
-    .footer .github-img{
+    .footer .github-img {
         width: 2.5rem;
     }
 }
+
 @keyframes navLinkFade {
     from {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
+}
+
+.mobile-menu.active .line2 {
     opacity: 0;
-  }
-  
-  .mobile-menu.active .line3 {
+}
+
+.mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
-  }
+}
