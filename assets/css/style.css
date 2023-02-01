@@ -59,11 +59,8 @@ main {
 }
 
 .about {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
     padding: 0 2.5rem;
-    margin: 2rem;
+    /* margin: 2rem; */
 }
 
 .intro {
@@ -79,6 +76,45 @@ main {
     width: 30rem;
     display: block;
     margin: auto;
+}
+
+.title-intro {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.title-intro h1 {
+    font-size: 2.225rem;
+}
+
+.title-intro span {
+    font-size: 1.355rem;
+    margin: auto;
+}
+
+.title-intro p {
+    font-size: 1.225rem;
+}
+
+.about .actions a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 0.825rem 1.7rem;
+    background-image: linear-gradient(90deg, rgba(104, 103, 103, 0.8) .5%, rgba(0, 0, 0, 0.648) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    transition: .3s;
+    margin: auto;
+    width: 15rem;
+}
+
+.about-me p {
+    font-size: 1.225rem;
 }
 
 .container-skills {
@@ -206,22 +242,37 @@ main {
 }
 
 .link {
-display: flex;
-align-items: center;
-margin: 0 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 2rem;
+}
+img.github-img {
+    width: 3rem;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1280px) {
+    .link {
+        margin: 0 15rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .link {
+        margin: 0 10rem;
+        padding: 0 2rem;
+    }
+
     .cards-projects {
         display: flex;
         flex-wrap: wrap;
         gap: 5rem;
+        justify-content: center;
     }
-    
     .pokedex {
         width: 26.6rem !important;
     }
-    
 }
 
 @media (max-width: 480px) {
@@ -343,7 +394,7 @@ margin: 0 4rem;
     }
 
     .profile img {
-        width: 70%;
+        width: 50vw;
         display: block;
         margin: auto;
         padding: 15px 2px;
@@ -470,7 +521,7 @@ margin: 0 4rem;
         width: 100%;
         position: static;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         height: 10vh;
         max-width: 100%;
@@ -490,12 +541,12 @@ margin: 0 4rem;
         height: 100%;
     }
 
-    .footer a {
-        padding: 0 2.225rem;
-    }
-
     .footer .github-img {
         width: 2.5rem;
+    }
+
+    .link {
+        margin: 0 2rem;
     }
 }
 
