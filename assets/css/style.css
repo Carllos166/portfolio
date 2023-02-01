@@ -62,13 +62,15 @@ main {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 10rem 2.5rem;
+    padding: 0 2.5rem;
+    margin: 2rem;
 }
 
 .intro {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    margin: auto;
 
 }
 
@@ -79,24 +81,147 @@ main {
     margin: auto;
 }
 
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 3rem;
 
-.skill-box {
-    width: 10rem;
 }
 
+.container-skills h2 {
+    display: flex;
+    padding: 5rem 0;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5rem;
+}
+
+.skill-box {
+    position: relative;
+    text-align: center;
+    background-color: #212121;
+    width: 8rem;
+    padding: 0;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .2s;
+    background-image: linear-gradient(90deg, rgba(104, 103, 103, 0.8) .5%, rgba(0, 0, 0, 0.648) 100%);
+}
+
+
+
 .imgJavascript {
-    width: 10rem;
+    position: relative;
+    text-align: center;
+    background-color: #212121;
+    width: 8rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .2s;
+    background-image: linear-gradient(90deg, rgba(104, 103, 103, 0.8) .5%, rgba(0, 0, 0, 0.648) 100%);
+}
+
+.cards img {
+    width: 5rem;
+}
+
+.container-projects {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 3rem 0;
+
+}
+
+.container-projects h2 {
+    display: block;
+    margin: auto;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+}
+
+.box {
+    padding: 15px;
+    background-image: linear-gradient(90deg, rgba(104, 103, 103, 0.8) .5%, rgba(0, 0, 0, 0.648) 100%);
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.box img {
+    width: 30rem;
+}
+
+.box p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.225rem;
+
 }
 
 .footer {
     background-color: var(--secondary-color);
+    width: 100%;
+    position: static;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    max-width: 100%;
+
 }
 
 .links {
     list-style: none;
     display: flex;
-    ;
+}
+
+.link {
+display: flex;
+align-items: center;
+margin: 0 4rem;
+}
+
+@media (min-width: 1000px) {
+    .cards-projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    
+    .pokedex {
+        width: 26.6rem !important;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -277,7 +402,7 @@ main {
     }
 
     .container-skills h2 {
-        padding: 5rem 0;
+        padding: 3rem 0rem 2rem 0;
         display: flex;
         justify-content: center;
     }
@@ -287,6 +412,7 @@ main {
         flex-wrap: wrap;
         align-items: center;
         gap: 5rem;
+        margin-bottom: 2rem;
     }
 
     .skill-box {
@@ -312,8 +438,12 @@ main {
         width: 3.5rem
     }
 
-
     .container-projects {
+        display: flex;
+        align-items: center;
+    }
+
+    .projects {
         background-color: var(--primary-color);
         display: flex;
         flex-wrap: wrap;
@@ -322,10 +452,10 @@ main {
         margin-right: auto;
     }
 
-    .projects h2 {
+    .container-projects h2 {
         display: flex;
         justify-content: center;
-        margin: 3rem 0;
+        margin: 1rem 0;
     }
 
     .cards-projects p {
@@ -359,8 +489,6 @@ main {
         width: 100%;
         height: 100%;
     }
-
-    .footer {}
 
     .footer a {
         padding: 0 2.225rem;
